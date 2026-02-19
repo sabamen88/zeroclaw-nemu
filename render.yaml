@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: nemu-zeroclaw-agent
+    runtime: docker
+    dockerfilePath: nemu/docker/Dockerfile
+    dockerContext: .
+    plan: starter
+    region: oregon
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: "3000"
+      - key: MINIMAX_API_KEY
+        sync: false
+      - key: NEON_DATABASE_URL
+        sync: false
+      - key: STORE_NAME
+        value: "Toko Demo Nemu"
+      - key: STORE_SLUG
+        value: "toko-demo-nemu"
+      - key: STORE_CATEGORY
+        value: "Fashion & Pakaian"
+      - key: IS_FOUNDING_SELLER
+        value: "true"
+      - key: INVITE_CODE
+        value: "NEMU2025"
