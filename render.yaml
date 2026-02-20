@@ -2,7 +2,7 @@ services:
   - type: web
     name: nemu-zeroclaw-agent
     runtime: docker
-    dockerfilePath: nemu/docker/Dockerfile
+    dockerfilePath: Dockerfile
     dockerContext: .
     plan: starter
     region: oregon
