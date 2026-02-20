@@ -2,7 +2,7 @@
 # Builds ZeroClaw with Nemu workspace layer
 
 # ── Stage 1: Build ZeroClaw binary ───────────────────────────
-FROM rust:1.92-slim AS builder
+FROM rust:1.93-slim AS builder
 
 WORKDIR /app
 
